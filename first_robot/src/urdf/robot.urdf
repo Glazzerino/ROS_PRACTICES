@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot name="first_robot">
+    
+    <link name="main_link">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+            <geometry>
+                <box size="0.8 0.8 0.1" />
+            </geometry>
+
+            <material name="purple">
+                <color rgba="1.60 0.32 2.40 1"/>
+            </material>
+        </visual>
+    </link>
+
+    <link name="FR_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 1.57079632679 0"/>
+
+            <geometry>
+                <cylinder radius="0.1" length="0.1"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="FR_wheel_main_joint" type="continuous">
+        <parent link="main_link"/>
+        <child link="FR_wheel"/>
+        <origin xyz="0.45 0.3 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+    <link name="BR_wheel">
+        <visual>
+            <origin xyz="0 0 0" rpy="0 1.57079632679 0"/>
+
+            <geometry>
+                <cylinder radius="0.1" length="0.1"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="BR_wheel_main_joint" type="continuous">
+        <parent link="main_link"/>
+        <child link="BR_wheel"/>
+        <origin xyz="-0.45 0.3 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="FL_wheel">
+        <visual>
+            <origin rpy="0 1.57079632679 0"/>
+            <geometry>
+                <cylinder length="0.1" radius="0.1"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="FL_wheel_main_joint">
+        <parent link="main_link"/>
+        <child link="FL_wheel"/>
+        <origin xyz="0.45 -0.3 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+
+    <link name="BL_wheel">
+        <visual>
+            <origin rpy="0 1.57079632679 0"/>
+            <geometry>
+                <cylinder length="0.1" radius="0.1"/>
+            </geometry>
+        </visual>
+    </link>
+
+    <joint name="BL_wheel_main_joint">
+        <parent link="main_link"/>
+        <child link="BL_wheel"/>
+        <origin xyz="-0.45 -0.3 0" rpy="0 0 0"/>
+        <axis xyz="0 1 0"/>
+    </joint>
+</robot>
