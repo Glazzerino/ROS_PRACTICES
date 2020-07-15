@@ -7,11 +7,17 @@
             <geometry>
                 <box size="0.8 0.8 0.1" />
             </geometry>
-
+            
             <material name="purple">
                 <color rgba="1.60 0.32 2.40 1"/>
             </material>
         </visual>
+
+        <collision>
+            <geometry>
+                <box size="0.8 0.8 0.1" />
+            </geometry>
+        </collision>
     </link>
 
     <link name="FR_wheel">
@@ -22,6 +28,11 @@
                 <cylinder radius="0.1" length="0.1"/>
             </geometry>
         </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.1" length="0.1"/>
+            </geometry>
+        </collision>
     </link>
 
     <joint name="FR_wheel_main_joint" type="continuous">
@@ -38,6 +49,11 @@
                 <cylinder radius="0.1" length="0.1"/>
             </geometry>
         </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.1" length="0.1"/>
+            </geometry>
+        </collision>
     </link>
 
     <joint name="BR_wheel_main_joint" type="continuous">
@@ -54,6 +70,11 @@
                 <cylinder length="0.1" radius="0.1"/>
             </geometry>
         </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.1" radius="0.1"/>
+            </geometry>
+        </collision>
     </link>
 
     <joint name="FL_wheel_main_joint">
@@ -70,6 +91,11 @@
                 <cylinder length="0.1" radius="0.1"/>
             </geometry>
         </visual>
+        <collision>
+            <geometry>
+                <cylinder length="0.1" radius="0.1"/>
+            </geometry>
+        </collision>
     </link>
 
     <joint name="BL_wheel_main_joint">

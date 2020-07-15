@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="firefighter">
+    <xacro:property name="radius" value="0.1"/>
+    <xacro:propert name="wheel_length" value="0.1"/>
+    <link name="main_link">
+        <visual>
+            <geometry>
+                <box size="0.8 0.8 0.1"/>
+            </geometry>
+        </visual>
+        <collision>
+            <geometry>
+                <box size="0.8 0.8 0.1"/>    
+            </geometry>
+        </collision>
+    </link>
+
+    <link name="FRwheel">
+        <geometr>
+            <geometry>
+                
+            </geometry>
+        </geometr>
+    </link>
+</robot>
